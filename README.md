@@ -6,8 +6,6 @@ To install dependencies run the command (in `anaconda prompt` or linux terminal)
 ```
 pip install -r requirements.txt
 ```
-## Running the app:
-To run the app `python app.py`
 
 ## Tutorials:
 - Basic flask tutorial: http://flask.pocoo.org/docs/0.12/quickstart/
