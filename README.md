@@ -31,6 +31,7 @@ mkdir /www
 sudo chown user www
 git clone https://github.com/mixmixmix/funwithflask.git
 ```
+
 Create place for uwsgi logs:
 ```
 sudo mkdir /var/log/uwsgi
@@ -39,10 +40,9 @@ Make sure correct ownership is setup if running from a user account:
 ```
 sudo chown -R user:user /var/log/uwsgi
 ```
-However to get logs of the system process (if it fails before starting uwsgi for instance) run
-`journalctl -u mixflask.service`
-
 (note: I assume that you clone this repo in `/www/funwithflask` as the services (`/setup/mixflask.service`) requires absolute paths.)
+
+One change you might need to do is to change server_name in nginx config file `/setup/mixflask`. Then following:
 
 ```
 sudo cp setup/mixflask.service /etc/systemd/system/
@@ -59,6 +59,10 @@ To apply changes in flask:
 ```
 sudo systemctl restart mixflask.service
 ```
+### Debugging
+
+However to get logs of the system process (if it fails before starting uwsgi for instance) run
+`journalctl -u mixflask.service` and if it fails later in nginx `sudo cat /var/log/nginx/error.log`)
 
 ## Tutorials:
 - Basic flask tutorial: http://flask.pocoo.org/docs/0.12/quickstart/
