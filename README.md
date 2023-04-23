@@ -7,9 +7,8 @@ We are using pipenv which seem to be the nicest thing for python in a while...
 ```
 sudo apt install python3-pip python3-dev
 pip install pipenv
-And pip
 ```
-Install virtual environment in the folder
+Install virtual environment in the folder (if you do not create `.venv` the development setup will work but uwsgi/nginx setup won't):
 ```
 mkdir .venv
 pipenv install
