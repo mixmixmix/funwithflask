@@ -37,9 +37,12 @@ sudo mkdir /var/log/uwsgi
 ```
 Make sure correct ownership is setup if running from a user account:
 ```
-sudo chown -R mix:mix /var/log/uwsgi
+sudo chown -R user:user /var/log/uwsgi
 ```
-note: I assume that you clone this repo in `/www/funwithflask` as the services (`/setup/mixflask.service`) requires absolute paths.
+However to get logs of the system process (if it fails before starting uwsgi for instance) run
+`journalctl -u mixflask.service`
+
+(note: I assume that you clone this repo in `/www/funwithflask` as the services (`/setup/mixflask.service`) requires absolute paths.)
 
 ```
 sudo cp setup/mixflask.service /etc/systemd/system/

@@ -3,7 +3,7 @@ Description=uWSGI instance to serve mixflask
 After=network.target
 
 [Service]
-User=mix
+User=root
 Group=www-data
 WorkingDirectory=/www/funwithflask/mixflask
 Environment="PATH=/www/funwithflask/.venv/bin"
