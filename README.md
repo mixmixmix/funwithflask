@@ -4,7 +4,7 @@ A bit of exercising with python flask (based on http://flask.pocoo.org/docs/0.12
 ## Install:
 To install dependencies run the command (in `anaconda prompt` or linux terminal):
 ```
-pip install -r requirements.txt
+pipenv install
 ```
 
 ## Running the app
