@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve mixflask
+After=network.target
+
+[Service]
+User=mix
+Group=www-data
+WorkingDirectory=/www/funwithflask/mixflask
+Environment="PATH=/www/funwithflask/.venv/bin"
+ExecStart=/www/funwithflask/.venv/bin/uwsgi --ini mixflask.ini
+
+[Install]
+WantedBy=multi-user.target

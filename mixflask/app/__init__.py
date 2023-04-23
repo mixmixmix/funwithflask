@@ -12,7 +12,7 @@ def hello(name=None):
 def index():
     if 'username' in session:
         return 'Logged in as %s' % escape(session['username'])
-    return 'You are not logged in'
+    return 'This is a mixflask, you are not logged in'
 
 
 @app.route('/login', methods=['GET', 'POST'])
