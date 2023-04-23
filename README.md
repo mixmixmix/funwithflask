@@ -2,6 +2,13 @@
 A bit of exercising with python flask (based on http://flask.pocoo.org/docs/0.12/quickstart/)
 
 ## Install:
+
+We are using pipenv which seem to be the nicest thing for python in a while...
+```
+sudo apt install python3-pip python3-dev
+pip install pipenv
+And pip
+```
 Install virtual environment in the folder
 ```
 mkdir .venv
@@ -16,8 +23,14 @@ python mixflask/run.py
 
 ## Running the app in production
 ### Installation
-Make sure you have nginx, and python3 tools installed. The following instructions are for an ubuntu-like system.
+Make sure you have nginx, and python3 tools installed. The following instructions are for an debian-like system
 
+Clone the files into a convenient location:
+```
+mkdir /www
+sudo chown user www
+git clone https://github.com/mixmixmix/funwithflask.git
+```
 Create place for uwsgi logs:
 ```
 sudo mkdir /var/log/uwsgi
